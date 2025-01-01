@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    align-content: center;
+}
+
+.card{
+    background-color: #1c1f2b;
+    width: 50px;
+    height: 50px;
+    margin: 100px auto;
+    border-radius: 50%;
+}
+
+.div{
+    position: relative;
+    background-color: aliceblue;
+    width: 440px;
+    height: 340px;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.card {
+    /* animation: bounce 2s alternate linear infinite; */
+    background-color: #203895;
+}
+
+.orbit {
+    transform: translate(-50%, -50%);
+    animation: 5s orbit linear infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-30px)
+    }
+
+    100%{
+        transform: translateY(30px);
+    }
+}
+
+@keyframes orbit {
+    0% {
+        transform: translate(-50%, -50%) 
+        rotate(0deg) 
+        translateX(120px) 
+        rotate(0deg);
+    }
+
+    100%{
+        transform: translate(-50%, -50%) 
+        rotate(360deg) 
+        translateX(120px) 
+        rotate(-360deg);
+    }
+
+}
+

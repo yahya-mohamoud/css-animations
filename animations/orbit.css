@@ -1,0 +1,123 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    align-content: center;
+    background-color: #1c1f2b;
+}
+
+
+
+.div{
+    position: relative;
+    background-color: aliceblue;
+    width: 400px;
+    height: 400px;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 50%;
+
+}
+
+.orbit, .orbitTwo,
+ .orbitThree, .orbitFour {
+    transform: translate(-50%, -50%);
+    background-color: #1c1f2b;
+    width: 30px;
+    height: 30px;
+    margin: 0px auto;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    --start-transform: translate(-50%, -50%) 
+    rotate(0deg) translateX(150px)
+     rotate(0deg);
+    --end-transform:translate(-50%, -50%) 
+    rotate(360deg) translateX(150px)
+     rotate(-360deg);
+
+}
+
+.orbitOne{
+    animation: 5s orbit linear infinite;
+}
+
+.orbitTwo{
+    animation: 5s orbit linear infinite;
+    --start-transform: translate(-50%, -50%) 
+    rotate(0deg) translateX(60px)
+     rotate(0deg);
+    --end-transform:translate(-50%, -50%) 
+    rotate(360deg) translateX(60px)
+     rotate(-360deg);
+
+}
+
+.orbitThree{
+    animation: 6s orbit linear infinite;
+    --start-transform: translate(-50%, -50%) 
+    rotate(0deg) translateX(100px)
+     rotate(0deg);
+    --end-transform:translate(-50%, -50%) 
+    rotate(360deg) translateX(100px)
+     rotate(-360deg);
+
+}
+
+.orbitFour{
+    animation: 8s orbit linear infinite;
+    --start-transform: translate(-50%, -50%) 
+    rotate(0deg) translateX(180px)
+     rotate(0deg);
+    --end-transform:translate(-50%, -50%) 
+    rotate(360deg) translateX(180px)
+     rotate(-360deg);
+
+}
+
+@keyframes orbit {
+    0% {
+       transform: var(--start-transform);
+    }
+
+    100% {
+        transform: var(--end-transform)
+    }
+
+}
+
+/* @keyframes orbitTwo {
+    0% {
+        transform: translate(-50%, -50%) 
+        rotate(0deg) 
+        translateX(60px) 
+        rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) 
+        rotate(360deg) 
+        translateX(60px) 
+        rotate(-360deg);
+    }
+} */
+
+/* @keyframes orbitThree {
+        0% {
+            transform: translate(-50%, -50%) 
+            rotate(0deg) 
+            translateX(100px) 
+            rotate(0deg);
+        }
+    
+        100%{
+            transform: translate(-50%, -50%) 
+            rotate(360deg) 
+            translateX(100px) 
+            rotate(-360deg);
+        }
+    
+    
+} */
